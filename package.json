@@ -1,0 +1,46 @@
+{
+  "name": "x6-vue-example",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "serve": "vite preview",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "dependencies": {
+    "@antv/layout": "^0.1.17",
+    "@antv/x6": "^1.24.5",
+    "@antv/x6-vue-shape": "^1.2.8",
+    "@liuli-util/array": "^3.2.5",
+    "@liuli-util/tree": "^3.2.5",
+    "dagre": "^0.8.5",
+    "lodash": "^4.17.21",
+    "mockjs": "^1.1.0",
+    "v-contextmenu": "^3.0.0",
+    "vue": "^3.0.5",
+    "vue-router": "4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.8",
+    "@liuli-util/prettier-standard-config": "^0.1.0",
+    "@storybook/addon-actions": "^6.3.4",
+    "@storybook/addon-essentials": "^6.3.4",
+    "@storybook/addon-links": "^6.3.4",
+    "@storybook/vue3": "^6.3.4",
+    "@types/dagre": "^0.7.45",
+    "@types/lodash": "^4.14.171",
+    "@types/mockjs": "^1.0.4",
+    "@vitejs/plugin-vue": "^1.2.5",
+    "@vue/compiler-sfc": "^3.0.5",
+    "babel-loader": "^8.2.2",
+    "prettier": "^2.3.2",
+    "rimraf": "^3.0.2",
+    "type-fest": "^1.2.2",
+    "typescript": "^4.3.2",
+    "vite": "^2.4.3",
+    "vue-loader": "^16.3.3",
+    "vue-tsc": "^0.0.24"
+  },
+  "prettier": "@liuli-util/prettier-standard-config"
+}
