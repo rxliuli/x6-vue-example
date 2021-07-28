@@ -29,6 +29,9 @@ export function registerSolidEdge() {
           targetMarker: null,
         },
       },
+      router: {
+        name: 'orth',
+      },
     },
     true,
   )
@@ -50,6 +53,9 @@ export function registerDashedEdge() {
           strokeDasharray: '5,5',
           d: 'M5 20 l215 0',
         },
+      },
+      router: {
+        name: 'orth',
       },
     },
     true,
@@ -105,6 +111,23 @@ export function addRect(
   graph.addEdge({
     source: parent,
     target: data.id,
+  })
+}
+
+export function moveNode(
+  graph: Graph,
+  node: Node<Node.Properties>,
+  newParent: Node<Node.Properties>,
+) {
+  console.log('moveNode remove before: ', node.children)
+  node.removeFromParent({ deep: false })
+  console.log('moveNode remove after: ', node.children)
+  newParent.addChild(node)
+  graph.addEdge({
+    shape: 'SolidEdge',
+    id: Random.guid(),
+    source: newParent.id,
+    target: node.id,
   })
 }
 
@@ -284,6 +307,7 @@ export function convertTreeToGraphJSON(tree: Enclosure[]): {
       }
       const parent = path[path.length - 2]
       edges.push({
+        shape: 'SolidEdge',
         id: Random.guid(),
         source: parent,
         target: item.id,

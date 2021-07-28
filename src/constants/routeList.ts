@@ -7,6 +7,7 @@ import CustomLayoutPage from '../views/demo/CustomLayoutPage.vue'
 import NodeActionPage from '../views/demo/NodeActionPage.vue'
 import PanAndZoomPage from '../views/demo/PanAndZoomPage.vue'
 import HomePage from '../views/home/HomePage.vue'
+import CustomDragPage from '../views/demo/CustomDragPage.vue'
 
 export const routeList: RouteRecordRaw[] = [
   {
@@ -41,5 +42,9 @@ export const routeList: RouteRecordRaw[] = [
   {
     path: '/pan-zoom',
     component: PanAndZoomPage,
+  },
+  {
+    path: '/custom-drag',
+    component: CustomDragPage,
   },
 ]
