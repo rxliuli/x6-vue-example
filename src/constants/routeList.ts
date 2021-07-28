@@ -6,8 +6,14 @@ import VContextMenuExamplePage from '../views/demo/VContextMenuExamplePage.vue'
 import CustomLayoutPage from '../views/demo/CustomLayoutPage.vue'
 import NodeActionPage from '../views/demo/NodeActionPage.vue'
 import PanAndZoomPage from '../views/demo/PanAndZoomPage.vue'
+import HomePage from '../views/home/HomePage.vue'
 
 export const routeList: RouteRecordRaw[] = [
+  {
+    path: '/',
+    component: HomePage,
+    strict: true,
+  },
   {
     path: '/basic-render',
     component: BasicRenderPage,
